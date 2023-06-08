@@ -1,0 +1,56 @@
+*{
+    font-family:'Ubuntu', sans-serif;
+}
+body{
+    position: relative;
+    margin: 0;
+    background-color: #eeeeee;
+}
+header{
+background: #1c1b1b;
+ height: 70px;
+padding: 2% 5%;
+margin-top: -21.440px;
+}
+
+.container{
+font-size: 2.2rem;
+    text-align: center;
+}
+
+#logo{
+    transition: box-shadow 0.3s ease;
+    color: #eeeeee;
+    cursor: pointer;
+    float: left;
+    
+}
+#logo:hover{
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0,0.3);
+
+}
+
+.navList{
+    float: right;
+}
+.navList ul {
+    margin-top:31.440px;
+    list-style: none;
+    display: flex;
+}
+
+.navList a{
+    color: #eeeeee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0 10px;
+    
+}
+
+.navList a:hover{
+    color: #2c0b2e;
+}
+
+div p {
+    color: #2c0b2e;
+}
