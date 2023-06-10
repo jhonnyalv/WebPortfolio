@@ -1,16 +1,19 @@
 *{
     font-family:'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
-    position: relative;
-    margin: 0;
     background-color: #eeeeee;
 }
 header{
-background: #1c1b1b;
- height: 70px;
-padding: 2% 5%;
-margin-top: -21.440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1c1b1b;
+    height: 3rem;
+    padding: 2rem;
 }
 
 .container{
@@ -19,38 +22,140 @@ font-size: 2.2rem;
 }
 
 #logo{
-    transition: box-shadow 0.3s ease;
     color: #eeeeee;
     cursor: pointer;
-    float: left;
     
 }
-#logo:hover{
-    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0,0.3);
 
-}
-
-.navList{
-    float: right;
-}
-.navList ul {
-    margin-top:31.440px;
+.navList{ 
     list-style: none;
     display: flex;
+    gap: 1rem;
+    
 }
 
-.navList a{
+.navList li a{
     color: #eeeeee;
     text-decoration: none;
     transition: color 0.3s ease;
-    padding: 0 10px;
+    padding: 0 .65rem;
+    
     
 }
 
-.navList a:hover{
+.nav a:hover{
     color: #2c0b2e;
 }
 
 div p {
     color: #2c0b2e;
+}
+
+.navList-github, .navList-linkedin{
+    font-size: 1.4rem;
+
+}
+
+.openMenu, .closeMenu {
+    display:none;
+   
+}
+
+
+@media screen and (max-width: 640px){
+    .openMenu, .closeMenu {
+        display: block;
+        border: 0;
+        font-size: 2.5rem;
+        background-color: #1c1b1b; 
+        color: #eeeeee;   
+        transition: color 0.3s ease;
+        cursor: pointer;
+        
+    }
+    .openMenu:hover, .closeMenu:hover{
+        color: #2c0b2e;
+    }
+
+   
+    .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1b1b;
+    box-shadow: 0 0 0 100vmax rgba(0, 0,0, 0.3);
+    padding: 2rem;
+    
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+        transition: ease-out 0.5s;
+    }
+
+    .navList{
+    flex-direction: column;
+    align-items: end;
+    }
+    
+ 
+}
+
+
+footer{
+    background-color: #1c1b1bd8;
+    display: flex;
+    justify-content: space-between;
+    height: 6rem;
+    padding: 2rem;
+    
+    
+}
+.copyright{
+   font-size: 1rem;
+   color: #eeeeee;   
+   transition: color 0.3s ease;
+   cursor: pointer;
+   text-decoration: none;
+}
+.copyright:hover{
+   color: #2c0b2e;
+}
+
+
+.returnUp{
+    font-size: 2rem;
+    color: #eeeeee;   
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+.returnUp:hover{
+    color: #2c0b2e;
+}
+
+img{
+    width: 4rem;
+
+}
+
+.container__img{
+
+    transition: box-shadow 0.3s ease;
+    background-color: #eeeeee;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+}
+
+.container__img:hover{
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.838);
 }
